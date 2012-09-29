@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Acompanhamento das Obras do Proares II</title>
+<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="foto.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="foto.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Proares II</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Relatório de Obras do Proares II</a></li>
+            <li><a href="#page3">Fotos da Obra</a></li>
+			<li><a href="#page4">Page Four</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Secretaria do Trabalho e Desenvolvimento Social - STDS</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Dados da Obra</h1>
+	</div>
+	<div data-role="content">
+	  <div data-role="fieldcontain">
+	    <label for="textinput">Municipio:</label>
+	    <input type="text" name="textinput" id="nomemunicipio" value=""  />
+	   </div> 
+       <div data-role="fieldcontain">
+	      <label for="textinput">Endereço da Obra:</label>
+	      <input type="text" name="textinput" id="enderecoobra" value=""  />
+       </div>
+	   <div data-role="fieldcontain">
+	      <fieldset data-role="controlgroup" data-type="horizontal">
+	        <legend>Qualidade da Obra:</legend>
+	        <input type="radio" name="qualidadeobra" id="qualidadeobra_0" value="" />
+	        <label for="qualidadeobra_0">Boa</label>
+	        <input type="radio" name="qualidadeobra" id="qualidadeobra_1" value="" />
+	        <label for="qualidadeobra_1">Normal</label>
+	        <input type="radio" name="qualidadeobra" id="qualidadeobra_2" value="" />
+	        <label for="qualidadeobra_2">Sofrivel</label>
+	        <input type="radio" name="qualidadeobra" id="qualidadeobra_3" value="" />
+	        <label for="qualidadeobra_3">Ruim</label>
+          </fieldset>
+       </div>
+	   <div data-role="fieldcontain">
+	        <fieldset data-role="controlgroup">
+	          <legend>Andamento da Obra:</legend>
+	          <input type="checkbox" name="andamentoobra" id="andamentoobra_0" class="custom" value="" />
+	          <label for="andamentoobra_0">No Cronograma</label>
+	          <input type="checkbox" name="andamentoobra" id="andamentoobra_1" class="custom" value="" />
+	          <label for="andamentoobra_1">Fora do Cronograma</label>
+	          <input type="checkbox" name="andamentoobra" id="andamentoobra_2" class="custom" value="" />
+	          <label for="andamentoobra_2">Aditivo de Tempo</label>
+            </fieldset>
+       </div>
+      <div data-role="fieldcontain">
+	    <label for="textinput">Referente a medição:</label>
+	    <input type="text" name="textinput" id="medicao" value=""  />
+      </div>
+	  <div data-role="fieldcontain">
+          <label for="flipswitch">Liberar Medição:</label>
+          <select name="flipswitch" id="flipswitch" data-role="slider">
+            <option value="off">Não</option>
+            <option value="on">Sim</option>
+          </select>
+      </div>    
+      <div data-role="fieldcontain">
+            <label for="textarea">Motivo:</label>
+            <textarea cols="40" rows="8" name="motivo" id="motivo"></textarea>
+      </div>
+      <div data-role="fieldcontain">
+            <label for="slider">Nº de Operários:</label>
+            <input type="range" name="operario" id="operario" value="0" min="0" max="500" />
+      </div>
+      <div data-role="fieldcontain">
+            <label for="flipswitch2">Obra paralisada:</label>
+            <select name="flipswitch2" id="flipswitch2" data-role="slider">
+              <option value="off">Não</option>
+              <option value="on">Sim</option>
+            </select>
+      </div>
+      <div data-role="fieldcontain">
+            <label for="textarea">Causa da Paralisação:</label>
+            <textarea cols="40" rows="8" name="paralisacao" id="paralisacao"></textarea>
+      </div>
+      <div data-role="fieldcontain">
+            <label for="textarea">Ocorrências:</label>
+            <textarea cols="40" rows="8" name="ocorrencia" id="ocorrencia"></textarea>
+      </div>
+      <a href="#page3" data-role="button" data-icon="alert">Fotos da Obra</a>
+      </div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Fotos de Acompanhamento</h1>
+	</div>
+	<div data-role="content">	
+		<div class=".panel">
+		  <div data-role="controlgroup">
+		    <button data-icon="plus" id="#btnGallery">Da Câmera</button>
+		    <button data-icon="plus" id="#btnGallery" >Da Galeria</button>
+	      </div>
+        
+        </div>
+        
+        
+        Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Page Four</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+</html>
